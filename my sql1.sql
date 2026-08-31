@@ -1,0 +1,2 @@
+-- This file has been superseded by the task-wise SQL files.
+-- See Task-I/ through Task-V/ for the E-Commerce Order Management System implementation.
