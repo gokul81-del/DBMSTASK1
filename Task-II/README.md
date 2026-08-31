@@ -1,14 +1,18 @@
-# Task II – Product and Category Management System
+# Task II — Product and Category Management System
 
 ## Requirements
-1. Design Product and Category tables.
-2. Define primary and foreign key relationships.
-3. Store product name, category, price, stock, and description.
-4. Perform product insertion, updating, and deletion.
+1. Design `Product` and `Category` tables.
+2. Define primary-key and foreign-key relationships.
+3. Store product name, category, price and stock.
+4. Perform product insertion, updating and deletion.
 5. Generate category-wise product reports.
 
-## Files
-- `product_category.sql` – table creation, sample data, CRUD operations, and report query.
+## SQL
+The complete implementation is in `product_category.sql`.
 
-## Relationship
-`Category (1) -> (Many) Product`
+## Tables
+- **Category** — category ID, category name and description.
+- **Product** — product ID, product name, category, price, stock and description.
+
+## Operations
+The SQL file includes table creation, sample data, INSERT, UPDATE, DELETE and a category-wise product report.
