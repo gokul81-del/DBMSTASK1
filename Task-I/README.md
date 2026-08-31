@@ -1,27 +1,17 @@
-# Task I – Requirement Analysis and Customer Database Module
-
-## Objective
-Analyze the business requirements of the E-Commerce Order Management System and implement the customer database module.
+# Task I — Requirement Analysis and Customer Database Module
 
 ## Requirements
 1. Analyze the business requirements of the E-Commerce Order Management System.
-2. Prepare a requirement specification for customers and the overall system.
-3. Create the Customer table.
-4. Store customer name, email, phone, address, city, and registration date.
-5. Maintain a unique customer email and a primary key for each customer.
-
-## Database Table
-### Customer
-- `customer_id` – Primary Key
-- `customer_name` – Customer name
-- `email` – Unique customer email
-- `phone` – Contact number
-- `address` – Customer address
-- `city` – Customer city
-- `created_at` – Registration date
+2. Prepare the requirement specification.
+3. Design the Customer database module.
+4. Store customer details needed for order management.
+5. Provide basic customer data retrieval.
 
 ## SQL
-See `customer.sql` in this folder.
+The implementation is in `customer.sql`.
+
+## Main Entity
+**Customer** — stores customer ID, name, email, phone, address, city and creation date.
 
 ## Existing Documentation
-The repository also contains the original Task-I requirement specification, ER diagram, and entity documentation PDFs at the project root.
+The repository-level Task-I documentation contains the requirement specification, ER diagram and entity documentation.
