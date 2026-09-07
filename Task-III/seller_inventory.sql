@@ -1,4 +1,3 @@
--- Task III: Seller and Inventory Management System
 CREATE DATABASE IF NOT EXISTS ecommerce_db;
 USE ecommerce_db;
 
@@ -32,12 +31,10 @@ INSERT INTO Inventory (seller_id, product_id, available_stock, unavailable_stock
 (1, 1, 50, 0), (1, 2, 30, 0), (2, 3, 100, 0),
 (3, 4, 40, 0), (1, 5, 25, 0);
 
--- Stock modification
 UPDATE Inventory
 SET available_stock = 45, last_updated = CURRENT_DATE
 WHERE seller_id = 1 AND product_id = 1;
 
--- Inventory status report
 SELECT s.seller_name, p.product_name, i.available_stock, i.unavailable_stock,
        CASE WHEN i.available_stock > 0 THEN 'AVAILABLE' ELSE 'UNAVAILABLE' END AS product_status
 FROM Inventory i
