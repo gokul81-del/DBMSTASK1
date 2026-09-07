@@ -1,12 +1,5 @@
--- E-Commerce Order Management System
--- TASK VI - Product Review and Rating Management System
-
 USE ecommerce_db;
 
--- ============================================================
--- REVIEW TABLE
--- Stores customer feedback for products.
--- ============================================================
 CREATE TABLE Review (
     review_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT NOT NULL,
@@ -17,10 +10,6 @@ CREATE TABLE Review (
     FOREIGN KEY (product_id) REFERENCES Product(product_id)
 );
 
--- ============================================================
--- RATING TABLE
--- Stores a rating from 1 to 5 for a product review.
--- ============================================================
 CREATE TABLE Rating (
     rating_id INT PRIMARY KEY AUTO_INCREMENT,
     review_id INT NOT NULL UNIQUE,
@@ -34,9 +23,6 @@ CREATE TABLE Rating (
     CHECK (rating_value BETWEEN 1 AND 5)
 );
 
--- ============================================================
--- SAMPLE REVIEWS
--- ============================================================
 INSERT INTO Review (customer_id, product_id, review_text) VALUES
 (1, 1, 'Good sound quality and comfortable to use.'),
 (2, 1, 'The headphones are useful and have good battery life.'),
@@ -44,9 +30,6 @@ INSERT INTO Review (customer_id, product_id, review_text) VALUES
 (1, 3, 'Comfortable cotton material and good quality.'),
 (2, 4, 'Helpful book for learning Java programming.');
 
--- ============================================================
--- SAMPLE RATINGS
--- ============================================================
 INSERT INTO Rating (review_id, customer_id, product_id, rating_value) VALUES
 (1, 1, 1, 5),
 (2, 2, 1, 4),
@@ -54,9 +37,6 @@ INSERT INTO Rating (review_id, customer_id, product_id, rating_value) VALUES
 (4, 1, 3, 4),
 (5, 2, 4, 5);
 
--- ============================================================
--- TASK VI.3: RETRIEVE PRODUCT REVIEW DETAILS
--- ============================================================
 SELECT
     r.review_id,
     c.customer_name,
@@ -70,10 +50,6 @@ JOIN Product p ON r.product_id = p.product_id
 LEFT JOIN Rating rt ON r.review_id = rt.review_id
 ORDER BY r.review_date DESC, r.review_id;
 
--- ============================================================
--- TASK VI.4: CALCULATE AVERAGE PRODUCT RATINGS
--- Uses the aggregate function AVG().
--- ============================================================
 SELECT
     p.product_id,
     p.product_name,
@@ -84,10 +60,6 @@ LEFT JOIN Rating rt ON p.product_id = rt.product_id
 GROUP BY p.product_id, p.product_name
 ORDER BY average_rating DESC;
 
--- ============================================================
--- TASK VI.5: IDENTIFY HIGHLY RATED PRODUCTS
--- Products with an average rating of 4 or above.
--- ============================================================
 SELECT
     p.product_id,
     p.product_name,
