@@ -1,4 +1,3 @@
--- Task II: Product and Category Management System
 CREATE DATABASE IF NOT EXISTS ecommerce_db;
 USE ecommerce_db;
 
@@ -30,17 +29,13 @@ INSERT INTO Product (product_name, category_id, price, stock, description) VALUE
 ('Java Programming Book', 3, 799.00, 40, 'Java programming guide'),
 ('Electric Kettle', 4, 1299.00, 25, 'Stainless steel kettle');
 
--- INSERT
 INSERT INTO Product (product_name, category_id, price, stock, description)
 VALUES ('USB Keyboard', 1, 699.00, 60, 'Wired USB keyboard');
 
--- UPDATE
 UPDATE Product SET price = 649.00, stock = 65 WHERE product_name = 'USB Keyboard';
 
--- DELETE
 DELETE FROM Product WHERE product_name = 'USB Keyboard';
 
--- Category-wise product report
 SELECT c.category_name, p.product_id, p.product_name, p.price, p.stock
 FROM Category c JOIN Product p ON c.category_id = p.category_id
 ORDER BY c.category_name, p.product_name;
