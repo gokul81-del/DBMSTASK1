@@ -1,4 +1,3 @@
--- Task I: Customer Database Module
 CREATE DATABASE IF NOT EXISTS ecommerce_db;
 USE ecommerce_db;
 
