@@ -1,4 +1,3 @@
--- Task IV: Order Management System
 CREATE DATABASE IF NOT EXISTS ecommerce_db;
 USE ecommerce_db;
 
@@ -32,10 +31,8 @@ INSERT INTO Order_Details (order_id, product_id, quantity, unit_price, total_pri
 (1, 3, 1, 599.00, 599.00),
 (2, 2, 1, 2499.00, 2499.00);
 
--- Order modification
 UPDATE Orders SET order_status = 'CONFIRMED' WHERE order_id = 1;
 
--- Customer order history report
 SELECT c.customer_id, c.customer_name, o.order_id, o.order_date, o.order_status,
        p.product_name, od.quantity, od.unit_price, od.total_price
 FROM Customer c
