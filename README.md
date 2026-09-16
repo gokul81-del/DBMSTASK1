@@ -29,6 +29,16 @@ Payment table, payment mode/date/amount/status, successful and failed transactio
 
 **Folder:** `Task-V/`
 
+### Task VI — Product Review and Rating Management
+Review and Rating tables, customer feedback, product review retrieval, average ratings using aggregate functions and highly rated product reports.
+
+**Folder:** `Task-VI/`
+
+### Task VII — SQL Query Implementation for E-Commerce Database
+SELECT, WHERE, ORDER BY, DISTINCT, product searches, customer/product retrieval, filtering conditions and basic business reports.
+
+**Folder:** `Task-VII/`
+
 ## SQL Execution Order
 
 Run the SQL files in this order:
@@ -38,5 +48,7 @@ Run the SQL files in this order:
 3. `Task-III/seller_inventory.sql`
 4. `Task-IV/orders.sql`
 5. `Task-V/payment.sql`
+6. `Task-VI/review_rating.sql`
+7. `Task-VII/sql_queries.sql`
 
 Each task has its own README containing its requirements and implementation details.
