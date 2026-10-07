@@ -39,6 +39,11 @@ SELECT, WHERE, ORDER BY, DISTINCT, product searches, customer/product retrieval,
 
 **Folder:** `Task-VII/`
 
+### Task IX — SQL Query Implementation for E-Commerce Database
+1. Apply COUNT(), SUM(), AVG(), MIN(), MAX(). 2. Generate total sales reports. 3. Find top customers based on purchase amount. 4. Identify best-selling products. 5. Perform category-wise sales analysis.
+
+**Folder:** `Task-IX/`
+
 ## SQL Execution Order
 
 Run the SQL files in this order:
@@ -50,5 +55,6 @@ Run the SQL files in this order:
 5. `Task-V/payment.sql`
 6. `Task-VI/review_rating.sql`
 7. `Task-VII/sql_queries.sql`
+8. `Task-IX/sql_queries.sql`
 
 Each task has its own README containing its requirements and implementation details.
