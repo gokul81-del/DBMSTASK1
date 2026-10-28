@@ -1,8 +1,6 @@
 CREATE DATABASE IF NOT EXISTS ecommerce_db;
 USE ecommerce_db;
 
--- Task XII: Transaction Management System
--- Run Tasks I to V first. The tables must use a transaction-safe engine such as InnoDB.
 
 DROP PROCEDURE IF EXISTS Place_Order_Transaction;
 DROP PROCEDURE IF EXISTS Demonstrate_Rollback;
@@ -146,20 +144,15 @@ END$$
 
 DELIMITER ;
 
--- Test the COMMIT transaction. This creates an order, payment and stock update.
--- Use existing customer/product IDs and a quantity within available stock.
 CALL Place_Order_Transaction(1, 1, 1, 'UPI');
 
--- Test ROLLBACK. The stock value should remain unchanged after the procedure.
 CALL Demonstrate_Rollback(1, 1);
 
--- Verify order, order details, payment and remaining stock.
 SELECT * FROM Orders ORDER BY order_id DESC;
 SELECT * FROM Order_Details ORDER BY order_detail_id DESC;
 SELECT * FROM Payment ORDER BY payment_id DESC;
 SELECT product_id, product_name, stock FROM Product ORDER BY product_id;
 
--- ACID consistency check: order total should match the sum of its detail totals.
 SELECT
     o.order_id,
     o.total_amount,
