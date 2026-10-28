@@ -20,7 +20,12 @@ Integrate the e-commerce database modules into a complete SQL-based platform for
 
 - `capstone_setup.sql` — Creates the normalized core schema and inserts realistic sample data.
 - `capstone_objects.sql` — Creates reporting views, an order-processing procedure, a sales function, stock and order-detail triggers, indexes, and business insight queries.
+- `ER_Diagram.md` — Entity-relationship diagram showing the tables, primary keys, foreign keys, and relationships.
 - `README.md` — Project overview and execution instructions.
+
+## ER Diagram
+
+See [`ER_Diagram.md`](ER_Diagram.md) for the full Mermaid ER diagram. GitHub renders it directly in the file preview.
 
 ## Schema and Relationships
 
